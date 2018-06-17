@@ -1,0 +1,25 @@
+<Screen>
+    Camera:
+        id: camera
+        play: True
+    
+    Image:
+        id: capImage
+    
+    Image:
+        id: styleImage
+
+    Button:
+        id: resButton
+        text: "Capture image first"
+        disabled: True
+        on_release: root.ShowStylizedImage()
+        on_release: self.text = 'Capture image first'
+        on_release: self.disabled = True
+
+    Button:
+        id: capButton
+        text: "Capture"
+        on_release: root.ids.resButton.text = "Show Results"
+        on_release: root.ids.resButton.disabled = False
+        on_release: root.Capture()
