@@ -10,4 +10,5 @@ It currently is able to learn about color composition, and hence the results are
 
 I'll be training a deeper autoencoder on a larger image size in the future. This project is very scalable.
 
+Requirements to run the scripts are at requirements.txt
  
