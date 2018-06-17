@@ -1,4 +1,4 @@
-from StyleTransfer import StyleTransfer, ShallowAutoencoder
+from Styletransfer import StyleTransfer, ShallowAutoencoder
 from PIL import Image
 import os
 

@@ -1,4 +1,5 @@
-import StyleTransfer
+import Styletransfer
+from Styletransfer import StyleTransfer, ShallowAutoencoder
 import kivy
 from glob import glob
 from random import randint
@@ -16,22 +17,34 @@ class Screen(GridLayout):
         super(Screen, self).__init__()
         self.rows = 5
 
-        self.img_shape = StyleTransfer.img_shape
-        self.ids.capImage.size = self.img_shape
-        self.ids.styleImage.size = self.img_shape
-        self.ids.camera.resolution = self.img_shape
+        self.alpha = 0.5
 
-        self.content_img_path = 'out/captures/IMG_20180617_200922.png'
-        self.style_img_path = ''
+        self.cap_img_name = ''
+        self.cap_img_path = ''
+        self.style_img_path = 'out/style_img/abstract-abstract-art-abstract-painting-935787.jpg'
         
-        self.ids.capImage.source = self.content_img_path
-        self.ids.styleImage.source = self.content_img_path
-
     def ShowStylizedImage(self):
-        pass
-    
+            try :
+                target_img = StyleTransfer(self.content_img_path, self.style_img_path, alpha=self.alpha)
+                target_img.save("out/stylized/" + self.cap_img_name)
+                self.ids.capImage.source = "out/stylized/" + self.cap_img_name
+            except :
+                print("Error Occured")
+                pass
+            
+
     def Capture(self):
-        pass
+        try :
+            camera = self.ids.camera
+            timestr = time.strftime("%Y%m%d_%H%M%S")
+
+            self.cap_img_name = "IMG_{}.png".format(timestr)
+            camera.export_to_png("out/captures/" + self.cap_img_name)
+            self.ids.capImage.source = "out/captures/" + self.cap_img_name
+            self.content_img_path = "out/captures/" + self.cap_img_name
+        except :
+            print("Error occured")
+            pass
 
 class StylizeApp(App):
     def build(self):
