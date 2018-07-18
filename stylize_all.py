@@ -30,6 +30,10 @@ style_paths = glob('sample/style_imgs/original/*')
 
 stylize = Stylize()
 
-target = stylize.StyleTransfer("/home/ojus/Documents/Projects/StylizeV2/sample/content_imgs/original/pexels-photo-1081673.jpeg", style_paths[0], 3, 0.8).squeeze(0)
-
-UnloadImg(target, 'sample/stylized/0.jpeg')
+itr = 1
+for i in range(len(content_paths)):
+    for j in range(len(style_paths)):
+        for level in range(1,4):
+            target = stylize.StyleTransfer(content_paths[i], style_paths[j], level, np.random.uniform(0., 1.)).squeeze(0)
+            UnloadImg(target, 'sample/stylized/'+str(itr)+'.jpeg')
+            itr += 1
