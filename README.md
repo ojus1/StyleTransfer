@@ -14,7 +14,7 @@ Some results:
 ![This](sample/examples/11.jpeg)
 ![gives this](sample/examples/7.jpeg)
 ![This](sample/content_imgs/original/IMG_20180628_222617.jpg)
-![gives this](sample/exampleslvl3.jpeg)
+![gives this](sample/examples/lvl3.jpeg)
 
 
 Instructions for running:
