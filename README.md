@@ -5,7 +5,7 @@ This is an implementation of the paper "Universal Style Transfer using Feature T
 
 
 Instructions for running:
-Change the "StyleTransfer" function call in "test_stylize.py"(test_stylize.py)
+Change the "StyleTransfer" function call in "test_stylize.py"[](test_stylize.py)
 Currently there are three different autoencoders trained which are of varying depths/no. of filters,
 Level1 being the shallowest, Level3 being the deepest.
 
