@@ -4,6 +4,11 @@ Neural Style Transfer using convolutional autoencoders.
 This is an implementation of the paper "Universal Style Transfer using Feature Transforms" https://arxiv.org/pdf/1705.08086.pdf
 
 
+Instructions for running:
+Change the "StyleTransfer" function call in "test_stylize.py"(test_stylize.py)
+Currently there are three different autoencoders trained which are of varying depths/no. of filters,
+Level1 being the shallowest, Level3 being the deepest.
+
 Some results:
 
 
@@ -16,9 +21,4 @@ Some results:
 ![This](sample/content_imgs/original/IMG_20180628_222617.jpg)
 ![gives this](sample/examples/lvl3.jpeg)
 
-
-Instructions for running:
-Change the "StyleTransfer" function call in "test_stylize.py"(test_stylize.py)
-Currently there are three different autoencoders trained which are of varying depths/no. of filters,
-Level1 being the shallowest, Level3 being the deepest.
 
