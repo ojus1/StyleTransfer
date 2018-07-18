@@ -5,15 +5,15 @@ This is an implementation of the paper "Universal Style Transfer using Feature T
 
 
 Some results:
-[This](sample/content_imgs/original/pexels-photo-1004684.jpeg)
-[Plus](sample/style_imgs/original/LOVE-BY-THE-PALETTE.jpg)
-[gives this](sample/examples/1.jpeg)
-[This](sample/examples/11.jpeg)
-[Plus](sample/style_imgs/original/LOVE-BY-THE-PALETTE.jpg)
-[gives this](sample/examples/7.jpeg)
-[This](sample/content_imgs/original/IMG_20180628_222617.jpg)
-[Plus](sample/style_imgs/original/LOVE-BY-THE-PALETTE.jpg)
-[gives] this(sample/exampleslvl3.jpeg)
+![This](sample/content_imgs/original/pexels-photo-1004684.jpeg)
+![Plus](sample/style_imgs/original/LOVE-BY-THE-PALETTE.jpg)
+![gives this](sample/examples/1.jpeg)
+![This](sample/examples/11.jpeg)
+![Plus](sample/style_imgs/original/LOVE-BY-THE-PALETTE.jpg)
+![gives this](sample/examples/7.jpeg)
+![This](sample/content_imgs/original/IMG_20180628_222617.jpg)
+![Plus](sample/style_imgs/original/LOVE-BY-THE-PALETTE.jpg)
+![gives this](sample/exampleslvl3.jpeg)
 
 
 Instructions for running:
